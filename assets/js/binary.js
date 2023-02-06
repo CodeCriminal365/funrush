@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.18/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.2","target":"arcade","targetVersion":"1.12.18","repo":"codecriminal365/funrush"}
-// total=1338723 new=8.28% cached=86.09% other=5.63%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.18/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.0.0","target":"arcade","targetVersion":"1.12.18","repo":"codecriminal365/funrush"}
+// total=1339344 new=8.13% cached=86.23% other=5.64%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -331,6 +331,7 @@ pxtrt.mapKeyNames = [
  "selection",
  "setAcceleration",
  "setAnchor",
+ "setBounceOnWall",
  "setDirection",
  "setFactory",
  "setFlag",
@@ -345,6 +346,7 @@ pxtrt.mapKeyNames = [
  "setSelection",
  "setSpeed",
  "setState",
+ "setStayInScreen",
  "setTheme",
  "setVelocity",
  "shakeAmplitude",
@@ -439,7 +441,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P57900(s) {
+function _main___P58669(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -880,79 +882,79 @@ switch (step) {
     s.callLocIdx = 73; s.pc = 43; return s.tmp_0;
   case 43:
     r0 = s.retval;
-    globals.GUI___57763 = (r0);
+    globals.GUI___58545 = (r0);
     s.tmp_0 = SpriteKind_create__P41023_mk(s);
     s.callLocIdx = 74; s.pc = 44; return s.tmp_0;
   case 44:
     r0 = s.retval;
-    globals.floor___57766 = (r0);
+    globals.floor___58548 = (r0);
     s.tmp_0 = controller_Button_onEvent__P40741_mk(s);
     s.tmp_0.arg0 = globals.A___40658;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P57773;
+    s.tmp_0.arg2 = inline__P58555;
     s.callLocIdx = 78; s.pc = 45; return s.tmp_0;
   case 45:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P40741_mk(s);
     s.tmp_0.arg0 = globals.left___40660;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P57778;
+    s.tmp_0.arg2 = inline__P58560;
     s.callLocIdx = 80; s.pc = 46; return s.tmp_0;
   case 46:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P40741_mk(s);
     s.tmp_0.arg0 = globals.right___40662;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P57785;
-    s.callLocIdx = 83; s.pc = 47; return s.tmp_0;
+    s.tmp_0.arg2 = inline__P58567;
+    s.callLocIdx = 82; s.pc = 47; return s.tmp_0;
   case 47:
     r0 = s.retval;
-    globals.mainPlayer___57788 = (null);
+    globals.mainPlayer___58570 = (null);
     s.tmp_0 = sprites_create__P40820_mk(s);
     s.tmp_1 = helpers_getImageByName__P41880_mk(s);
     s.tmp_1.arg0 = "character";
-    s.callLocIdx = 85; s.pc = 49; return s.tmp_1;
+    s.callLocIdx = 84; s.pc = 49; return s.tmp_1;
   case 49:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.Player___41024;
-    s.callLocIdx = 86; s.pc = 48; return s.tmp_0;
+    s.callLocIdx = 85; s.pc = 48; return s.tmp_0;
   case 48:
     r0 = s.retval;
-    globals.mainPlayer___57788 = (r0);
+    globals.mainPlayer___58570 = (r0);
     s.tmp_0 = Sprite_setPosition__P40953_mk(s);
-    s.tmp_0.arg0 = globals.mainPlayer___57788;
+    s.tmp_0.arg0 = globals.mainPlayer___58570;
     s.tmp_0.arg1 = 63;
     s.tmp_0.arg2 = 74;
-    s.callLocIdx = 87; s.pc = 50; return s.tmp_0;
+    s.callLocIdx = 86; s.pc = 50; return s.tmp_0;
   case 50:
     r0 = s.retval;
     s.tmp_0 = scene_setBackgroundImage__P41429_mk(s);
     s.tmp_1 = helpers_getImageByName__P41880_mk(s);
     s.tmp_1.arg0 = "skyBox";
-    s.callLocIdx = 88; s.pc = 52; return s.tmp_1;
+    s.callLocIdx = 87; s.pc = 52; return s.tmp_1;
   case 52:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 89; s.pc = 51; return s.tmp_0;
+    s.callLocIdx = 88; s.pc = 51; return s.tmp_0;
   case 51:
     r0 = s.retval;
     s.tmp_0 = forever__P40628_mk(s);
-    s.tmp_0.arg0 = inline__P57800;
-    s.callLocIdx = 95; s.pc = 53; return s.tmp_0;
+    s.tmp_0.arg0 = inline__P58582;
+    s.callLocIdx = 91; s.pc = 53; return s.tmp_0;
   case 53:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P57900.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P57900.continuations = [  ]
+_main___P58669.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P58669.continuations = [  ]
 
-function _main___P57900_mk(s) {
+function _main___P58669_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P57900, depth: s.depth + 1,
+        parent: s, fn: _main___P58669, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1688,7 +1690,7 @@ function myTiles_inline__P46005_mk(s) {
 
 
 
-function inline__P57773(s) {
+function inline__P58555(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1698,7 +1700,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = moveUp__P57769_mk(s);
+    s.tmp_0 = moveUp__P58551_mk(s);
     s.tmp_0.arg0 = 25;
     s.callLocIdx = 77; s.pc = 1; return s.tmp_0;
   case 1:
@@ -1707,12 +1709,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P57773.info = {"start":339,"length":30,"line":10,"column":52,"endLine":12,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P58555.info = {"start":339,"length":30,"line":10,"column":52,"endLine":12,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P57773_mk(s) {
+function inline__P58555_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P57773, depth: s.depth + 1,
+        parent: s, fn: inline__P58555, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -1721,7 +1723,7 @@ function inline__P57773_mk(s) {
 
 
 
-function inline__P57778(s) {
+function inline__P58560(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1731,7 +1733,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = moveLeft__P57780_mk(s);
+    s.tmp_0 = moveLeft__P58562_mk(s);
     s.tmp_0.arg0 = 25;
     s.callLocIdx = 79; s.pc = 1; return s.tmp_0;
   case 1:
@@ -1740,12 +1742,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P57778.info = {"start":426,"length":32,"line":13,"column":55,"endLine":15,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P58560.info = {"start":426,"length":32,"line":13,"column":55,"endLine":15,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P57778_mk(s) {
+function inline__P58560_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P57778, depth: s.depth + 1,
+        parent: s, fn: inline__P58560, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -1754,7 +1756,7 @@ function inline__P57778_mk(s) {
 
 
 
-function inline__P57785(s) {
+function inline__P58567(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1764,21 +1766,21 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = moveRight__P57768_mk(s);
+    s.tmp_0 = moveRight__P58550_mk(s);
     s.tmp_0.arg0 = 25;
-    s.callLocIdx = 82; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 81; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P57785.info = {"start":599,"length":33,"line":19,"column":56,"endLine":21,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P58567.info = {"start":619,"length":33,"line":19,"column":56,"endLine":21,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P57785_mk(s) {
+function inline__P58567_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P57785, depth: s.depth + 1,
+        parent: s, fn: inline__P58567, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -1787,7 +1789,7 @@ function inline__P57785_mk(s) {
 
 
 
-function inline__P57800(s) {
+function inline__P58582(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1797,75 +1799,37 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_2 = Sprite_y__P40900_mk(s);
-    s.tmp_2.arg0 = globals.mainPlayer___57788;
-    s.callLocIdx = 90; s.pc = 5; return s.tmp_2;
-  case 5:
-    r0 = s.retval;
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 >= 100);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    s.tmp_3 = Sprite_vy__P40905_mk(s);
-    s.tmp_4 = r0 = globals.mainPlayer___57788;
-    s.tmp_3.arg0 = r0;
-    s.tmp_6 = Sprite_vy__P40904_mk(s);
-    s.tmp_6.arg0 = s.tmp_4;
-    s.callLocIdx = 91; s.pc = 7; return s.tmp_6;
-  case 7:
-    r0 = s.retval;
-    s.tmp_5 = r0;
-    r0 = (s.tmp_5 + 5);
-    s.tmp_3.arg1 = r0;
-    s.callLocIdx = 92; s.pc = 6; return s.tmp_3;
-  case 6:
-    r0 = s.retval;
-    { step = 4; continue; }
+    s.tmp_0 = Sprite_setStayInScreen__P40961_mk(s);
+    s.tmp_0.arg0 = globals.mainPlayer___58570;
+    s.tmp_0.arg1 = true;
+    s.callLocIdx = 89; s.pc = 1; return s.tmp_0;
   case 1:
-    s.tmp_2 = Sprite_y__P40900_mk(s);
-    s.tmp_2.arg0 = globals.mainPlayer___57788;
-    s.callLocIdx = 93; s.pc = 8; return s.tmp_2;
-  case 8:
     r0 = s.retval;
-    s.tmp_1 = r0;
-    r0 = (s.tmp_1 <= 100);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 2; continue; }
-    s.tmp_3 = moveDown__P57781_mk(s);
-    s.tmp_3.arg0 = 25;
-    s.callLocIdx = 94; s.pc = 9; return s.tmp_3;
-  case 9:
-    r0 = s.retval;
+    s.tmp_0 = Sprite_setBounceOnWall__P40962_mk(s);
+    s.tmp_0.arg0 = globals.mainPlayer___58570;
+    s.tmp_0.arg1 = true;
+    s.callLocIdx = 90; s.pc = 2; return s.tmp_0;
   case 2:
-  case 3:
-  case 4:
+    r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P57800.info = {"start":925,"length":162,"line":29,"column":8,"endLine":37,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P58582.info = {"start":945,"length":89,"line":29,"column":8,"endLine":32,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P57800_mk(s) {
+function inline__P58582_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P57800, depth: s.depth + 1,
+        parent: s, fn: inline__P58582, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  tmp_6: undefined,
 } }
 
 
 
 
 
-function moveDown__P57781(s) {
+function Sprite_setBounceOnWall__P40962(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1877,36 +1841,39 @@ switch (step) {
 
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = Sprite_setVelocity__P40954_mk(s);
-    s.tmp_0.arg0 = globals.mainPlayer___57788;
-    s.tmp_0.arg1 = 0;
-    r0 = (s.arg0 / 5);
-    s.tmp_0.arg2 = r0;
-    s.callLocIdx = 81; s.pc = 1; return s.tmp_0;
+    r0 = s.arg0;
+    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
+    s.tmp_0 = Sprite_setFlag__P40963_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.tmp_0.arg1 = 32;
+    s.tmp_0.arg2 = s.arg1;
+    s.callLocIdx = 27; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-moveDown__P57781.info = {"start":460,"length":82,"line":16,"column":0,"endLine":18,"endColumn":1,"fileName":"main.ts","functionName":"moveDown","argumentNames":["pixels3"]}
+Sprite_setBounceOnWall__P40962.info = {"start":19866,"length":87,"line":664,"column":4,"endLine":666,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"setBounceOnWall","argumentNames":["this","on"]}
 
-function moveDown__P57781_mk(s) {
+function Sprite_setBounceOnWall__P40962_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: moveDown__P57781, depth: s.depth + 1,
+        parent: s, fn: Sprite_setBounceOnWall__P40962, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
+  arg1: undefined,
 } }
 
 
 
 
 
-function Sprite_setVelocity__P40954(s) {
+function Sprite_setFlag__P40963(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1924,30 +1891,43 @@ switch (step) {
     }
     r0 = s.arg0;
     if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
-    s.tmp_0 = Sprite_vx__P40903_mk(s);
-    s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.arg1;
-    s.callLocIdx = 380; s.pc = 1; return s.tmp_0;
+    r0 = pxsim_numops_toBoolDecr(s.arg2);
+    if (!r0) { step = 1; continue; }
+    s.tmp_0 = r0 = s.arg0;
+    r0 = s.tmp_0.fields["flags"];
+    s.tmp_2 = r0;
+    r0 = (s.tmp_2 | s.arg1);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_0).fields["flags"] = (s.tmp_1);
+    { step = 2; continue; }
   case 1:
-    r0 = s.retval;
-    s.tmp_0 = Sprite_vy__P40905_mk(s);
-    s.tmp_0.arg0 = s.arg0;
-    s.tmp_0.arg1 = s.arg2;
-    s.callLocIdx = 381; s.pc = 2; return s.tmp_0;
+    s.tmp_0 = r0 = s.arg0;
+    r0 = s.arg0.fields["flags"];
+    s.tmp_4 = r0;
+    r0 = (~ s.tmp_4);
+    s.tmp_3 = r0;
+    r0 = (s.tmp_3 | s.arg1);
+    s.tmp_2 = r0;
+    r0 = (~ s.tmp_2);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_0).fields["flags"] = (s.tmp_1);
   case 2:
-    r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-Sprite_setVelocity__P40954.info = {"start":14495,"length":93,"line":516,"column":4,"endLine":519,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"setVelocity","argumentNames":["this","vx","vy"]}
+Sprite_setFlag__P40963.info = {"start":20205,"length":130,"line":676,"column":4,"endLine":679,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"setFlag","argumentNames":["this","flag","on"]}
 
-function Sprite_setVelocity__P40954_mk(s) {
+function Sprite_setFlag__P40963_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Sprite_setVelocity__P40954, depth: s.depth + 1,
+        parent: s, fn: Sprite_setFlag__P40963, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -1957,7 +1937,7 @@ function Sprite_setVelocity__P40954_mk(s) {
 
 
 
-function Sprite_vx__P40903(s) {
+function Sprite_setStayInScreen__P40961(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1974,300 +1954,25 @@ switch (step) {
     }
     r0 = s.arg0;
     if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
-    s.tmp_0 = r0 = s.arg0;
-    r0 = (s.arg1 * 256);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_2 | 0);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_0).fields["_vx"] = (s.tmp_1);
+    s.tmp_0 = Sprite_setFlag__P40963_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.tmp_0.arg1 = 8;
+    s.tmp_0.arg2 = s.arg1;
+    s.callLocIdx = 27; s.pc = 1; return s.tmp_0;
+  case 1:
+    r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-Sprite_vx__P40903.info = {"start":3426,"length":51,"line":137,"column":4,"endLine":139,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"vx","argumentNames":["this","v"]}
+Sprite_setStayInScreen__P40961.info = {"start":19465,"length":87,"line":652,"column":4,"endLine":654,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"setStayInScreen","argumentNames":["this","on"]}
 
-function Sprite_vx__P40903_mk(s) {
+function Sprite_setStayInScreen__P40961_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Sprite_vx__P40903, depth: s.depth + 1,
+        parent: s, fn: Sprite_setStayInScreen__P40961, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
-function Sprite_vx__P40902(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
-    r0 = s.arg0.fields["_vx"];
-    s.tmp_0 = r0;
-    r0 = (s.tmp_0 / 256);
-    return leaveAccessor(s, r0)
-  default: oops()
-} } }
-Sprite_vx__P40902.info = {"start":3264,"length":60,"line":132,"column":4,"endLine":134,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"vx","argumentNames":["this"]}
-Sprite_vx__P40902.isGetter = true;
-
-function Sprite_vx__P40902_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Sprite_vx__P40902, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function Fx_toFloat__P38703(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = (s.arg0 / 256);
-    return leave(s, r0)
-  default: oops()
-} } }
-Fx_toFloat__P38703.info = {"start":2470,"length":81,"line":77,"column":4,"endLine":79,"endColumn":5,"fileName":"pxt_modules/base/fixed.ts","functionName":"toFloat","argumentNames":["v"]}
-
-function Fx_toFloat__P38703_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Fx_toFloat__P38703, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-} }
-
-
-
-
-
-function Sprite_vy__P40905(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
-    s.tmp_0 = r0 = s.arg0;
-    r0 = (s.arg1 * 256);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_2 | 0);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_0).fields["_vy"] = (s.tmp_1);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-Sprite_vy__P40905.info = {"start":3757,"length":51,"line":148,"column":4,"endLine":150,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"vy","argumentNames":["this","v"]}
-
-function Sprite_vy__P40905_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Sprite_vy__P40905, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
-function Sprite_vy__P40904(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
-    r0 = s.arg0.fields["_vy"];
-    s.tmp_0 = r0;
-    r0 = (s.tmp_0 / 256);
-    return leaveAccessor(s, r0)
-  default: oops()
-} } }
-Sprite_vy__P40904.info = {"start":3595,"length":60,"line":143,"column":4,"endLine":145,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"vy","argumentNames":["this"]}
-Sprite_vy__P40904.isGetter = true;
-
-function Sprite_vy__P40904_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Sprite_vy__P40904, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function Sprite_y__P40900(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
-    r0 = s.arg0.fields["_y"];
-    s.tmp_1 = r0;
-    r0 = s.arg0.fields["_height"];
-    s.tmp_3 = r0;
-    r0 = (s.tmp_3 << 8);
-    s.tmp_4 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_4, 512);
-    s.tmp_2 = r0;
-    r0 = (s.tmp_1 + s.tmp_2);
-    s.tmp_0 = r0;
-    r0 = (s.tmp_0 / 256);
-    return leaveAccessor(s, r0)
-  default: oops()
-} } }
-Sprite_y__P40900.info = {"start":2893,"length":100,"line":121,"column":4,"endLine":123,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"y","argumentNames":["this"]}
-Sprite_y__P40900.isGetter = true;
-
-function Sprite_y__P40900_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Sprite_y__P40900, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function Fx_div__P38692(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = (s.arg0 << 8);
-    s.tmp_0 = r0;
-    r0 = pxsim.Math_.idiv(s.tmp_0, s.arg1);
-    return leave(s, r0)
-  default: oops()
-} } }
-Fx_div__P38692.info = {"start":1145,"length":129,"line":35,"column":4,"endLine":37,"endColumn":5,"fileName":"pxt_modules/base/fixed.ts","functionName":"div","argumentNames":["a","b"]}
-
-function Fx_div__P38692_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Fx_div__P38692, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
-function Fx_add__P38687(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = (s.arg0 + s.arg1);
-    return leave(s, r0)
-  default: oops()
-} } }
-Fx_add__P38687.info = {"start":511,"length":118,"line":20,"column":4,"endLine":22,"endColumn":5,"fileName":"pxt_modules/base/fixed.ts","functionName":"add","argumentNames":["a","b"]}
-
-function Fx_add__P38687_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Fx_add__P38687, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -2886,6 +2591,159 @@ function PhysicsEngine_moveSprite__P41059_mk(s) {
   arg1: undefined,
   arg2: undefined,
   arg3: undefined,
+} }
+
+
+
+
+
+function Sprite_y__P40900(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
+    r0 = s.arg0.fields["_y"];
+    s.tmp_1 = r0;
+    r0 = s.arg0.fields["_height"];
+    s.tmp_3 = r0;
+    r0 = (s.tmp_3 << 8);
+    s.tmp_4 = r0;
+    r0 = pxsim.Math_.idiv(s.tmp_4, 512);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_1 + s.tmp_2);
+    s.tmp_0 = r0;
+    r0 = (s.tmp_0 / 256);
+    return leaveAccessor(s, r0)
+  default: oops()
+} } }
+Sprite_y__P40900.info = {"start":2893,"length":100,"line":121,"column":4,"endLine":123,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"y","argumentNames":["this"]}
+Sprite_y__P40900.isGetter = true;
+
+function Sprite_y__P40900_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Sprite_y__P40900, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
+function Fx_toFloat__P38703(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = (s.arg0 / 256);
+    return leave(s, r0)
+  default: oops()
+} } }
+Fx_toFloat__P38703.info = {"start":2470,"length":81,"line":77,"column":4,"endLine":79,"endColumn":5,"fileName":"pxt_modules/base/fixed.ts","functionName":"toFloat","argumentNames":["v"]}
+
+function Fx_toFloat__P38703_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Fx_toFloat__P38703, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+} }
+
+
+
+
+
+function Fx_div__P38692(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = (s.arg0 << 8);
+    s.tmp_0 = r0;
+    r0 = pxsim.Math_.idiv(s.tmp_0, s.arg1);
+    return leave(s, r0)
+  default: oops()
+} } }
+Fx_div__P38692.info = {"start":1145,"length":129,"line":35,"column":4,"endLine":37,"endColumn":5,"fileName":"pxt_modules/base/fixed.ts","functionName":"div","argumentNames":["a","b"]}
+
+function Fx_div__P38692_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Fx_div__P38692, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function Fx_add__P38687(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = (s.arg0 + s.arg1);
+    return leave(s, r0)
+  default: oops()
+} } }
+Fx_add__P38687.info = {"start":511,"length":118,"line":20,"column":4,"endLine":22,"endColumn":5,"fileName":"pxt_modules/base/fixed.ts","functionName":"add","argumentNames":["a","b"]}
+
+function Fx_add__P38687_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Fx_add__P38687, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  arg0: undefined,
+  arg1: undefined,
 } }
 
 
@@ -5482,6 +5340,172 @@ function Sprite_ax__P40906_mk(s) {
 
 
 
+function Sprite_vy__P40905(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
+    s.tmp_0 = r0 = s.arg0;
+    r0 = (s.arg1 * 256);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_2 | 0);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_0).fields["_vy"] = (s.tmp_1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+Sprite_vy__P40905.info = {"start":3757,"length":51,"line":148,"column":4,"endLine":150,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"vy","argumentNames":["this","v"]}
+
+function Sprite_vy__P40905_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Sprite_vy__P40905, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function Sprite_vy__P40904(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
+    r0 = s.arg0.fields["_vy"];
+    s.tmp_0 = r0;
+    r0 = (s.tmp_0 / 256);
+    return leaveAccessor(s, r0)
+  default: oops()
+} } }
+Sprite_vy__P40904.info = {"start":3595,"length":60,"line":143,"column":4,"endLine":145,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"vy","argumentNames":["this"]}
+Sprite_vy__P40904.isGetter = true;
+
+function Sprite_vy__P40904_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Sprite_vy__P40904, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
+function Sprite_vx__P40903(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
+    s.tmp_0 = r0 = s.arg0;
+    r0 = (s.arg1 * 256);
+    s.tmp_2 = r0;
+    r0 = (s.tmp_2 | 0);
+    s.tmp_1 = r0;
+    r0 = (s.tmp_0).fields["_vx"] = (s.tmp_1);
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+Sprite_vx__P40903.info = {"start":3426,"length":51,"line":137,"column":4,"endLine":139,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"vx","argumentNames":["this","v"]}
+
+function Sprite_vx__P40903_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Sprite_vx__P40903, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
+function Sprite_vx__P40902(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
+    r0 = s.arg0.fields["_vx"];
+    s.tmp_0 = r0;
+    r0 = (s.tmp_0 / 256);
+    return leaveAccessor(s, r0)
+  default: oops()
+} } }
+Sprite_vx__P40902.info = {"start":3264,"length":60,"line":132,"column":4,"endLine":134,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"vx","argumentNames":["this"]}
+Sprite_vx__P40902.isGetter = true;
+
+function Sprite_vx__P40902_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Sprite_vx__P40902, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  arg0: undefined,
+} }
+
+
+
+
+
 function sprites_BaseSprite_constructor__P40641(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
@@ -5766,7 +5790,7 @@ function helpers_arrayFilter__P38640_mk(s) {
 
 
 
-function moveRight__P57768(s) {
+function moveRight__P58550(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -5781,7 +5805,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = Sprite_setVelocity__P40954_mk(s);
-    s.tmp_0.arg0 = globals.mainPlayer___57788;
+    s.tmp_0.arg0 = globals.mainPlayer___58570;
     s.tmp_0.arg1 = s.arg0;
     r0 = (s.arg0 / 5);
     s.tmp_0.arg2 = r0;
@@ -5792,12 +5816,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-moveRight__P57768.info = {"start":113,"length":86,"line":4,"column":0,"endLine":6,"endColumn":1,"fileName":"main.ts","functionName":"moveRight","argumentNames":["pixels"]}
+moveRight__P58550.info = {"start":113,"length":86,"line":4,"column":0,"endLine":6,"endColumn":1,"fileName":"main.ts","functionName":"moveRight","argumentNames":["pixels"]}
 
-function moveRight__P57768_mk(s) {
+function moveRight__P58550_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: moveRight__P57768, depth: s.depth + 1,
+        parent: s, fn: moveRight__P58550, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -5807,7 +5831,58 @@ function moveRight__P57768_mk(s) {
 
 
 
-function moveLeft__P57780(s) {
+function Sprite_setVelocity__P40954(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.arg2 = (s.lambdaArgs[2]);
+      s.lambdaArgs = null;
+    }
+    r0 = s.arg0;
+    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
+    s.tmp_0 = Sprite_vx__P40903_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.tmp_0.arg1 = s.arg1;
+    s.callLocIdx = 380; s.pc = 1; return s.tmp_0;
+  case 1:
+    r0 = s.retval;
+    s.tmp_0 = Sprite_vy__P40905_mk(s);
+    s.tmp_0.arg0 = s.arg0;
+    s.tmp_0.arg1 = s.arg2;
+    s.callLocIdx = 381; s.pc = 2; return s.tmp_0;
+  case 2:
+    r0 = s.retval;
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+Sprite_setVelocity__P40954.info = {"start":14495,"length":93,"line":516,"column":4,"endLine":519,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"setVelocity","argumentNames":["this","vx","vy"]}
+
+function Sprite_setVelocity__P40954_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: Sprite_setVelocity__P40954, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  arg0: undefined,
+  arg1: undefined,
+  arg2: undefined,
+} }
+
+
+
+
+
+function moveLeft__P58562(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -5822,7 +5897,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = Sprite_setVelocity__P40954_mk(s);
-    s.tmp_0.arg0 = globals.mainPlayer___57788;
+    s.tmp_0.arg0 = globals.mainPlayer___58570;
     s.tmp_1 = r0 = s.arg0;
     r0 = (s.arg0 * 2);
     s.tmp_2 = r0;
@@ -5830,19 +5905,19 @@ switch (step) {
     s.tmp_0.arg1 = r0;
     r0 = (s.arg0 / 5);
     s.tmp_0.arg2 = r0;
-    s.callLocIdx = 84; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 83; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-moveLeft__P57780.info = {"start":634,"length":102,"line":22,"column":0,"endLine":24,"endColumn":1,"fileName":"main.ts","functionName":"moveLeft","argumentNames":["pixels4"]}
+moveLeft__P58562.info = {"start":654,"length":102,"line":22,"column":0,"endLine":24,"endColumn":1,"fileName":"main.ts","functionName":"moveLeft","argumentNames":["pixels4"]}
 
-function moveLeft__P57780_mk(s) {
+function moveLeft__P58562_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: moveLeft__P57780, depth: s.depth + 1,
+        parent: s, fn: moveLeft__P58562, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -5854,7 +5929,7 @@ function moveLeft__P57780_mk(s) {
 
 
 
-function moveUp__P57769(s) {
+function moveUp__P58551(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -5869,7 +5944,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = Sprite_setVelocity__P40954_mk(s);
-    s.tmp_0.arg0 = globals.mainPlayer___57788;
+    s.tmp_0.arg0 = globals.mainPlayer___58570;
     r0 = (s.arg0 / 5);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = s.arg0;
@@ -5880,12 +5955,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-moveUp__P57769.info = {"start":200,"length":86,"line":7,"column":0,"endLine":9,"endColumn":1,"fileName":"main.ts","functionName":"moveUp","argumentNames":["pixels2"]}
+moveUp__P58551.info = {"start":200,"length":86,"line":7,"column":0,"endLine":9,"endColumn":1,"fileName":"main.ts","functionName":"moveUp","argumentNames":["pixels2"]}
 
-function moveUp__P57769_mk(s) {
+function moveUp__P58551_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: moveUp__P57769, depth: s.depth + 1,
+        parent: s, fn: moveUp__P58551, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -20408,70 +20483,6 @@ function particles_ParticleSource_setRelativeToCamera__P41706_mk(s) {
   tmp_4: undefined,
   arg0: undefined,
   arg1: undefined,
-} }
-
-
-
-
-
-function Sprite_setFlag__P40963(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.arg2 = (s.lambdaArgs[2]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, Sprite__C40885_VT)) failedCast(r0);
-    r0 = pxsim_numops_toBoolDecr(s.arg2);
-    if (!r0) { step = 1; continue; }
-    s.tmp_0 = r0 = s.arg0;
-    r0 = s.tmp_0.fields["flags"];
-    s.tmp_2 = r0;
-    r0 = (s.tmp_2 | s.arg1);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_0).fields["flags"] = (s.tmp_1);
-    { step = 2; continue; }
-  case 1:
-    s.tmp_0 = r0 = s.arg0;
-    r0 = s.arg0.fields["flags"];
-    s.tmp_4 = r0;
-    r0 = (~ s.tmp_4);
-    s.tmp_3 = r0;
-    r0 = (s.tmp_3 | s.arg1);
-    s.tmp_2 = r0;
-    r0 = (~ s.tmp_2);
-    s.tmp_1 = r0;
-    r0 = (s.tmp_0).fields["flags"] = (s.tmp_1);
-  case 2:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-Sprite_setFlag__P40963.info = {"start":20205,"length":130,"line":676,"column":4,"endLine":679,"endColumn":5,"fileName":"pxt_modules/game/sprite.ts","functionName":"setFlag","argumentNames":["this","flag","on"]}
-
-function Sprite_setFlag__P40963_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: Sprite_setFlag__P40963, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
-  arg1: undefined,
-  arg2: undefined,
 } }
 
 
@@ -43637,6 +43648,8 @@ const Sprite__C40885_VT = mkVTable({
     "isOutOfScreen": Sprite_isOutOfScreen__P40958,
     "__drawCore": Sprite___drawCore__P40959,
     "__update": Sprite___update__P40960,
+    "setStayInScreen": Sprite_setStayInScreen__P40961,
+    "setBounceOnWall": Sprite_setBounceOnWall__P40962,
     "setFlag": Sprite_setFlag__P40963,
     "overlapsWith": Sprite_overlapsWith__P40964,
     "clearObstacles": Sprite_clearObstacles__P40969,
@@ -44708,7 +44721,7 @@ const sprites_BaseSpriteSayRenderer__C40804_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["transparency16___43291","GUI___57763","floor___57766","mainPlayer___57788"])
+const breakpoints = setupDebugger(1, ["transparency16___43291","GUI___58545","floor___58548","mainPlayer___58570"])
 
-return _main___P57900
+return _main___P58669
 })
