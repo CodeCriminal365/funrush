@@ -28,10 +28,10 @@ mainPlayer = sprites.create(assets.image`character`, SpriteKind.Player)
 mainPlayer.setPosition(63, 74)
 scene.setBackgroundImage(assets.image`skyBox`)
 forever(function () {
-    if (mainPlayer.y <= 100) {
+    if (mainPlayer.y >= 100) {
         mainPlayer.vy += 5
     } else {
-        if (mainPlayer.y >= 100) {
+        if (mainPlayer.y <= 100) {
             moveDown(25)
         }
     }
