@@ -8,6 +8,9 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 function moveRight (pixels: number) {
     mainPlayer.setVelocity(pixels, pixels / 5)
 }
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    mainPlayer.setVelocity(0, 0)
+})
 function moveUp (pixels2: number) {
     mainPlayer.setVelocity(pixels2 / 5, pixels2)
 }
