@@ -15,7 +15,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     moveLeft(25)
 })
 function moveDown (pixels3: number) {
-    mainPlayer.setVelocity(pixels3 - pixels3 * 2, pixels3 / 5)
+    mainPlayer.setVelocity(0, pixels3 / 5)
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     moveRight(25)
