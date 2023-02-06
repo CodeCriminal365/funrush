@@ -15,7 +15,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     moveLeft(25)
 })
 function moveDown (pixels3: number) {
-    mainPlayer.setVelocity(0, pixels3 / 5)
+    mainPlayer.setVelocity(pixels3 - pixels3 * 2, pixels3 / 5)
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     moveRight(25)
@@ -28,11 +28,6 @@ mainPlayer = sprites.create(assets.image`character`, SpriteKind.Player)
 mainPlayer.setPosition(63, 74)
 scene.setBackgroundImage(assets.image`skyBox`)
 forever(function () {
-    if (mainPlayer.y >= 100) {
-        mainPlayer.vy += 5
-    } else {
-        if (mainPlayer.y <= 100) {
-            moveDown(25)
-        }
-    }
+    mainPlayer.setStayInScreen(true)
+    mainPlayer.setBounceOnWall(true)
 })
