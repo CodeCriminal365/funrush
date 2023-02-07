@@ -2,6 +2,7 @@
 
 
 > Open this page at [https://codecriminal365.github.io/funrush/](https://codecriminal365.github.io/funrush/)
+> Readme: [https://codecriminal365.github.io/funrush/README]
 
 ## Use as Extension
 
