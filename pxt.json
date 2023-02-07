@@ -5,7 +5,8 @@
     "dependencies": {
         "device": "*",
         "multiplayer": "*",
-        "controller": "*"
+        "controller": "*",
+        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.15"
     },
     "files": [
         "main.blocks",
@@ -29,5 +30,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
